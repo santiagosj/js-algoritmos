@@ -67,4 +67,21 @@ console.log(ownProps)
 //lo mas conveniente es dejar de duplicar codigo...asi que vamos a usar prototype, que es un objeto compartido a travez de todas las instancias del objeto
 
 Dog.prototype.numLegs = 4
-//todas las instancias del objeto Dog van a heredar numLegs = 4
+//todas las instancias del objeto Dog van a heredar la propiedad numLegs = 4
+
+//para iterar por todas las propiedades y agregar las propiedades de la nueva instancia a ownProps y los prototypes de Dog a prototypeProps hacemos lo siguiente:
+//suponinedo que tengo una instancia del objeto Dog :
+
+let marcaPerro = new Dog('Cacho')
+
+let prototypeProps = [];
+
+for(let property in marcaPerro){
+  if(marcaPerro.hasOwnProperty(property)){
+      ownProps.push(property)
+  } else {
+    prototypeProps.push(property)
+  }
+}
+
+console.log(prototypeProps)
