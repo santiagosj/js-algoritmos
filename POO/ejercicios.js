@@ -38,3 +38,33 @@ function Personaje(name, lastName){
 }
 //instancia del objeto constructor Personaje()
 let southParkPersonaje =  new Personaje('Randy','Marsh')
+//para verificar la instancia del objeto podemos usar instanceof
+southParkPersonaje instanceof Personaje //return true
+
+//ownProperty
+//name y numLegs son ownPrperties porque estan definidas directamente en la instancia del objeto padre
+
+function Bird(name){
+  this.name = name,
+  this.numLegs = 2
+}
+
+let duck = new Bird("Donald");
+let canary = new Bird("Tweety");
+
+let ownProps = [];
+//recorremos con un loop el objeto y hacemos el push a la lista vacia que va a contener las propiedades del objeto.
+
+for (let property in duck){
+  if(duck.hasOwnProperty(property)){
+    ownProps.push(property);
+  }
+}
+
+console.log(ownProps)
+
+//Prototype
+//lo mas conveniente es dejar de duplicar codigo...asi que vamos a usar prototype, que es un objeto compartido a travez de todas las instancias del objeto
+
+Dog.prototype.numLegs = 4
+//todas las instancias del objeto Dog van a heredar numLegs = 4
