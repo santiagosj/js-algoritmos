@@ -22,18 +22,19 @@ let southParkCaracter = {
 //El constructor es una funcion que crea nuevos objetos define las propiedades y el comportamiento que van a pertencer al nuevo objeto
 //esta manera es muy basica y presenta el problema de que va a transmitir por herencia sus atributos a los nuevos objetos.
 function Person(){
-  this.name = 'Peter',
-  this.lastName = 'Greefin',
-  this.age = 45
+  this.name = 'Peter';
+  this.lastName = 'Greefin';
+  this.age = 45;
 }
 
 //para crear una instancia del objeto hacemos lo siguiente:
 let personaNueva = new Person();
+//personaNueva podria llamarce en este caso let peter...porque hereda las propiedades de Person
 
 //extendiendo el constructor para que reciba parametros:
 function Personaje(name, lastName){
-  this.name = name,
-  this.lastName = lastName,
+  this.name = name;
+  this.lastName = lastName;
   this.age = 32
 }
 //instancia del objeto constructor Personaje()
@@ -45,8 +46,8 @@ southParkPersonaje instanceof Personaje //return true
 //name y numLegs son ownPrperties porque estan definidas directamente en la instancia del objeto padre
 
 function Bird(name){
-  this.name = name,
-  this.numLegs = 2
+  this.name = name;
+  this.numLegs = 2;
 }
 
 let duck = new Bird("Donald");
@@ -85,3 +86,32 @@ for(let property in marcaPerro){
 }
 
 console.log(prototypeProps)
+//la propiedad constructor...para co
+
+function PoliticamenteIncorrecto (name, serie){
+  this.name = name;
+  this.serie = serie;
+}
+
+let rick = new PoliticamenteIncorrecto('Rick','Rick and Morty')
+let randy = new PoliticamenteIncorrecto('Randy', 'South Park' )
+let peter = new PoliticamenteIncorrecto('Peter','Familly Guy')
+
+function joinThePIClub( candidato ){
+  if(candidato.constructor === PoliticamenteIncorrecto){
+    return true
+  }else{
+    return false
+  }
+}
+
+// function joinThePIClub( candidato ){
+//    candidato.constructor instanceof PoliticamenteIncorrecto ? true :  false
+// }
+
+//Se puede modificar el constructor PoliticamenteIncorrecto de la siguiente manera para no hacerlo como en la linea 69 lo cual a gran escala significaria a pain in the ass..particularmente esta manera permite hacer multiples modificaciones al objeto..
+
+PoliticamenteIncorrecto.prototype = {
+  saludar: () => console.log('Hola soy ' + this.name + ' y pertenezco a ' + this.serie ),
+  
+}
