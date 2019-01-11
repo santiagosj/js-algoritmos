@@ -29,7 +29,7 @@ function Person(){
 
 //para crear una instancia del objeto hacemos lo siguiente:
 let personaNueva = new Person();
-//personaNueva podria llamarce en este caso let peter...porque hereda las propiedades de Person
+//personaNueva podria llamarse en este caso let peter...porque hereda las propiedades de Person
 
 //extendiendo el constructor para que reciba parametros:
 function Personaje(name, lastName){
@@ -113,5 +113,5 @@ function joinThePIClub( candidato ){
 
 PoliticamenteIncorrecto.prototype = {
   saludar: () => console.log('Hola soy ' + this.name + ' y pertenezco a ' + this.serie ),
-  
+
 }
