@@ -1,4 +1,4 @@
-//EJEMPLOS POO CON DUMMY DATA EN JS PARA ENTENDER LOS CONCEPROS PRINCIPALES DE HERENCIA, ENCAPSULAMIENTO, POLIMORFISMO Y ABSTRACCION
+//EJEMPLOS POO CON DUMMY DATA EN JS PARA REPASAR LOS CONCEPROS PRINCIPALES DE HERENCIA, ENCAPSULAMIENTO, POLIMORFISMO Y ABSTRACCION
 //simple objeto con dos propiedades.
 let dog = {
   name:'Willy',
@@ -110,8 +110,19 @@ function joinThePIClub( candidato ){
 // }
 
 //Se puede modificar el constructor PoliticamenteIncorrecto de la siguiente manera para no hacerlo como en la linea 69 lo cual a gran escala significaria a pain in the ass..particularmente esta manera permite hacer multiples modificaciones al objeto..
-
+//es importante definir el constructor..para que por ejemplo console.log(rick.constructor) no imprima undefined
 PoliticamenteIncorrecto.prototype = {
-  saludar: () => console.log('Hola soy ' + this.name + ' y pertenezco a ' + this.serie ),
-
+  constructor:PoliticamenteIncorrecto,
+  saludar: () => console.log('Hola soy ' + this.name + ' y pertenezco a ' + this.serie )
 }
+
+//para entender un poco mejor la relacion entre una instancia y un constructor pordemos usar el metodo isPrototypeOf like so:
+
+PoliticamenteIncorrecto.prototype.isPrototypeOf(randy)
+//returns true
+//incluso llendo hacia arriba en la cadena de herencia.
+
+typeof PoliticamenteIncorrecto.prototype // returns Object, entonces..
+
+Object.prototype.isPrototypeOf(PoliticamenteIncorrecto.prototype)
+//returns true
