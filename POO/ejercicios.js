@@ -86,16 +86,16 @@ for(let property in marcaPerro){
 }
 
 console.log(prototypeProps)
-//la propiedad constructor...para co
+//la propiedad constructor...para comprobar si, en efecto, un objeto es instancia del constructor se puede hacer algo asi...
 
 function PoliticamenteIncorrecto (name, serie){
   this.name = name;
   this.serie = serie;
 }
 
-let rick = new PoliticamenteIncorrecto('Rick','Rick and Morty')
+let rick = new PoliticamenteIncorrecto('Rick', 'Rick and Morty')
 let randy = new PoliticamenteIncorrecto('Randy', 'South Park' )
-let peter = new PoliticamenteIncorrecto('Peter','Familly Guy')
+let peter = new PoliticamenteIncorrecto('Peter', 'Familly Guy')
 
 function joinThePIClub( candidato ){
   if(candidato.constructor === PoliticamenteIncorrecto){
