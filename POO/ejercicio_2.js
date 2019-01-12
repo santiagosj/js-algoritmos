@@ -16,14 +16,14 @@ let randy = new PoliticamenteIncorrecto('Randy Marsh', 'South Park')
 rick.saludar()
 randy.saludar()
 
-/*/Matando a Kenny/*/
+
 
 function SouthParkCaracter(name){
   this.name = name;
   this.kenny = Math.floor(Math.random() * Math.floor(3));
   this.hdp = () => {
-    if (this.kenny > 1) {
-     console.log('Mataron a Kenny! hijos de Puta!')
+    if (this.kenny > 0) {
+         console.log('Mataron a Kenny! hijos de Puta!')
     }
   };
   this.saludo = () => {
@@ -54,3 +54,12 @@ stan.saludo()
 
 let eric = new SouthParkCaracter('Eric')
 eric.saludo()
+
+let kyle = new SouthParkCaracter('Kyle')
+kyle.saludo()
+kyle.hdp()
+
+console.log(stan instanceof SouthParkCaracter)
+console.log(typeof eric)
+console.log(kyle)
+console.log(stan)
