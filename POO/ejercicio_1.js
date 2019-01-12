@@ -1,4 +1,4 @@
-//EJEMPLOS POO CON DUMMY DATA EN JS PARA REPASAR LOS CONCEPROS PRINCIPALES DE HERENCIA, ENCAPSULAMIENTO, POLIMORFISMO Y ABSTRACCION
+//EJEMPLOS POO CON DUMMY DATA EN JS PARA REPASAR LOS CONCEPTOS PRINCIPALES DE HERENCIA, ENCAPSULAMIENTO, POLIMORFISMO Y ABSTRACCION
 //simple objeto con dos propiedades.
 let dog = {
   name:'Willy',
@@ -11,14 +11,17 @@ console.log(dog.name)
 let alien = {
   name:'Alf',
   numLegs:2,
-  saludo: () => console.log("No hay problemaa!")
+  saludo: () => console.log("No hay problemaa! soy " + alien.name + ' Volví en forma de objeto js')
+}
+alien.saludo()
+//se puede hacer el codigo un poco mas reusable con la palabra clave "this":
+function SouthParkCaracter(name) {
+  this.name = name;
+  this.hdp = () => console.log("Mataron a " + this.name + " hijos de P###!!!");
 }
 
-//se puede hacer el codigo un poco mas reusable con la palabra clave "this":
-let southParkCaracter = {
-  name:'Kenny',
-  hdp: () =>  "Mataron a " + this.name + " hijos de P###!!!"
-}
+let stan = new SouthParkCaracter('Kenny')
+stan.hdp()
 //El constructor es una funcion que crea nuevos objetos define las propiedades y el comportamiento que van a pertencer al nuevo objeto
 //esta manera es muy basica y presenta el problema de que va a transmitir por herencia sus atributos a los nuevos objetos.
 function Person(){
@@ -43,7 +46,7 @@ let southParkPersonaje =  new Personaje('Randy','Marsh')
 southParkPersonaje instanceof Personaje //return true
 
 //ownProperty
-//name y numLegs son ownPrperties porque estan definidas directamente en la instancia del objeto padre
+//name y numLegs son ownPrperties porque estan definidas directamente en el objeto padre (constructor)
 
 function Bird(name){
   this.name = name;
@@ -66,7 +69,9 @@ console.log(ownProps)
 
 //Prototype
 //lo mas conveniente es dejar de duplicar codigo...asi que vamos a usar prototype, que es un objeto compartido a travez de todas las instancias del objeto
-
+function Dog(name){
+  this.name=name;
+}
 Dog.prototype.numLegs = 4
 //todas las instancias del objeto Dog van a heredar la propiedad numLegs = 4
 
@@ -88,19 +93,19 @@ for(let property in marcaPerro){
 console.log(prototypeProps)
 //la propiedad constructor...para comprobar si, en efecto, un objeto es instancia del constructor se puede hacer algo asi...
 
-function PoliticamenteIncorrecto (name, serie){
+function PoliticamenteIncorrecto(name, serie){
   this.name = name;
   this.serie = serie;
 }
-
-let rick = new PoliticamenteIncorrecto('Rick', 'Rick and Morty')
+//instancias de PoliticamenteIncorrecto
 let randy = new PoliticamenteIncorrecto('Randy', 'South Park' )
 let peter = new PoliticamenteIncorrecto('Peter', 'Familly Guy')
+let rick = new PoliticamenteIncorrecto('Rick', 'Rick and Morty')
 
 function joinThePIClub( candidato ){
   if(candidato.constructor === PoliticamenteIncorrecto){
     return true
-  }else{
+  } else {
     return false
   }
 }
@@ -113,12 +118,12 @@ function joinThePIClub( candidato ){
 //es importante definir el constructor..para que por ejemplo console.log(rick.constructor) no imprima undefined
 PoliticamenteIncorrecto.prototype = {
   constructor:PoliticamenteIncorrecto,
-  saludar: () => console.log('Hola soy ' + this.name + ' y pertenezco a ' + this.serie )
+  saludar: () => console.log('Hola soy ' + this.name + ' y pertenezco a ' + this.serie ),
 }
-
+console.log(PoliticamenteIncorrecto.prototype.isPrototypeOf(rick))
 //para entender un poco mejor la relacion entre una instancia y un constructor pordemos usar el metodo isPrototypeOf like so:
 
-PoliticamenteIncorrecto.prototype.isPrototypeOf(randy)
+PoliticamenteIncorrecto.prototype.isPrototypeOf(peter)
 //returns true
 //incluso llendo hacia arriba en la cadena de herencia.
 
@@ -126,3 +131,16 @@ typeof PoliticamenteIncorrecto.prototype // returns Object, entonces..
 
 Object.prototype.isPrototypeOf(PoliticamenteIncorrecto.prototype)
 //returns true
+//utilizando herencia para no repetir codigo
+
+function Animal(){
+    Animal.prototype.comer = ()=>console.log('ñam ñam ñam')
+ }
+
+Animal.prototype = {
+  constructor:Animal,
+}
+
+let bulldog = new Animal();
+
+bulldog.comer()
