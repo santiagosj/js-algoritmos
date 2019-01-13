@@ -39,7 +39,7 @@ function SouthParkCaracter(name){
          return false
       break
       default:
-        console.log('mmm ok?')
+        console.log('mmokay?')
     }
   }
 }
@@ -63,3 +63,30 @@ console.log(stan instanceof SouthParkCaracter)
 console.log(typeof eric)
 console.log(kyle)
 console.log(stan)
+
+
+/*CONTADOR DE CARTAS*/
+
+function Contador(){
+  this.card = [
+     {
+       cartasPositivas:[2,3,4,5,6]
+     },
+     {
+       cartasNeutras:[7,8,9]
+     },
+     {
+       cartasNegativas:[10,'J','Q','K','A']
+     }
+   ]
+}
+
+Contador.prototype = {
+  constructor:Contador
+}
+
+let carta = new Contador()
+
+console.log(carta.card[0])
+console.log(carta.card[1])
+console.log(carta.card[2])

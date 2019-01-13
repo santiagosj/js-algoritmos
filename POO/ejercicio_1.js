@@ -96,11 +96,14 @@ console.log(prototypeProps)
 function PoliticamenteIncorrecto(name, serie){
   this.name = name;
   this.serie = serie;
+  this.saludar =() => console.log('Hola soy ' + this.name + ' y pertenezco a ' + this.serie )
 }
 //instancias de PoliticamenteIncorrecto
 let randy = new PoliticamenteIncorrecto('Randy', 'South Park' )
 let peter = new PoliticamenteIncorrecto('Peter', 'Familly Guy')
 let rick = new PoliticamenteIncorrecto('Rick', 'Rick and Morty')
+
+rick.saludar()
 
 function joinThePIClub( candidato ){
   if(candidato.constructor === PoliticamenteIncorrecto){
@@ -117,17 +120,14 @@ function joinThePIClub( candidato ){
 //Se puede modificar el constructor PoliticamenteIncorrecto de la siguiente manera para no hacerlo como en la linea 69 lo cual a gran escala significaria a pain in the ass..particularmente esta manera permite hacer multiples modificaciones al objeto..
 //es importante definir el constructor..para que por ejemplo console.log(rick.constructor) no imprima undefined
 PoliticamenteIncorrecto.prototype = {
-  constructor:PoliticamenteIncorrecto,
-  saludar: () => console.log('Hola soy ' + this.name + ' y pertenezco a ' + this.serie ),
+  constructor:PoliticamenteIncorrecto
 }
-console.log(PoliticamenteIncorrecto.prototype.isPrototypeOf(rick))
+console.log(PoliticamenteIncorrecto.prototype)
 //para entender un poco mejor la relacion entre una instancia y un constructor pordemos usar el metodo isPrototypeOf like so:
-
-PoliticamenteIncorrecto.prototype.isPrototypeOf(peter)
 //returns true
 //incluso llendo hacia arriba en la cadena de herencia.
 
-typeof PoliticamenteIncorrecto.prototype // returns Object, entonces..
+console.log(typeof PoliticamenteIncorrecto.prototype) // returns Object, entonces..
 
 Object.prototype.isPrototypeOf(PoliticamenteIncorrecto.prototype)
 //returns true
