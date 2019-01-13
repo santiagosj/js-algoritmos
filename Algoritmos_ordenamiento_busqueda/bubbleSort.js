@@ -2,8 +2,8 @@
 
 /*
 public static void burbuja(int[]a){
-   for(int i = 1; i < a.lenght; i++){
-     for(int j = 0; j < a.lenght - i;j++){
+   for(int i = 1; i < a.length; i++){
+     for(int j = 0; j < a.length - i;j++){
         if(a[j] > a[j + 1]){
           int aux = a[j + 1];
           a[j] = a[j + 1];
