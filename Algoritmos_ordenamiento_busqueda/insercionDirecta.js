@@ -1,15 +1,15 @@
 //ORDENAMIENTO POR INSERCION DIRECTA
 
-/*
-public static void insercionDirecta(int[]a){
-   for(int i = 1; i < a.lenght; i++){
-     int aux = a[i];
-     int j = i - 1;
-     while(j >= 0 && aux < a[j] ){
-       a[j + 1] = a[j];
-       j--;
+function insertionSort (a) {
+    for (var i = 0; i < a.length; i++) {
+        var k = a[i];
+        for (var j = i; j > 0 && k < a[j - 1]; j--)
+            a[j] = a[j - 1];
+        a[j] = k;
     }
-    a[j + 1] = aux;
-  } //for
+    return a;
 }
-*/
+
+var a = [4, 65, 2, -31, 0, 99, 83, 782, 1];
+insertionSort(a);
+document.write(a.join(" "));
