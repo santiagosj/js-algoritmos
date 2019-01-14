@@ -12,10 +12,6 @@ function shellSort (a) {
     return a;
 }
 
-var a = [];
-var n = location.href.match(/\?(\d+)|$/)[1] || 10;
-for (var i = 0; i < n; i++)
-    a.push(parseInt(Math.random() * 100));
-shellSort(a);
-document.write(a.join(" "));
+var a = [5,10,40,2,7,15,23,38,41,9,3]
+shellSort(a)
 console.log(a)
