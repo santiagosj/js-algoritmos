@@ -12,6 +12,6 @@ function shellSort (a) {
     return a;
 }
 
-var a = [5,10,40,2,7,15,23,38,41,9,3]
+var a = [5, 10, 40, 2, 7, 15, 23, 38, 41, 9, 3]
 shellSort(a)
 console.log(a)

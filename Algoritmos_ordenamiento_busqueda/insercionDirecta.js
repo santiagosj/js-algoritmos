@@ -12,4 +12,4 @@ function insertionSort (a) {
 
 var a = [4, 65, 2, -31, 0, 99, 83, 782, 1];
 insertionSort(a);
-document.write(a.join(" "));
+console.log(a)
