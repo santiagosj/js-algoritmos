@@ -17,3 +17,9 @@ function selectionSort(nums) {
   }
   return nums;
 }
+
+var a = [-2, 9, 23, 12, 68, 5, 3, 10];
+
+selectionSort(a)
+
+console.log(a);
