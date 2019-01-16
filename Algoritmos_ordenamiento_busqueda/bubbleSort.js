@@ -67,7 +67,7 @@ Array.prototype.burbuja = function (){
 
 let misNumeros = [ 6, 12, 4, 35, 26, -3, 49, 81, 20 ]
 
-let misLetras = ['N', 'C', 'F', 'B', 'Z', 'O', 'A']
+let misLetras = [ 'N', 'C', 'F', 'B', 'Z', 'O', 'A' ]
 
 misNumeros.burbuja()
 
