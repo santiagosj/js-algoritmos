@@ -17,29 +17,28 @@ rick.saludar()
 randy.saludar()
 
 
-
 function SouthParkCaracter(name){
   this.name = name;
   this.kenny = Math.floor(Math.random() * Math.floor(3));
   this.hdp = () => {
     if (this.kenny > 0) {
-         console.log('Mataron a Kenny! hijos de Puta!')
+         console.log(this.name + ': Mataron a Kenny! hijos de Puta!')
     }
   };
   this.saludo = () => {
-    switch (this.name) {
+    switch (this.name){
       case 'Stan':
-         console.log('Mierda...estoy en una computadora otra vez!?')
+         console.log(this.name + ': Mierda...estoy en una computadora otra vez!?')
          return false
       case 'Eric':
-         console.log('ME CAGO EN LOS HIPPIES!')
+         console.log(this.name + ': ME CAGO EN LOS HIPPIES!')
          return false
       case 'Kyle':
-         console.log('Creo que hoy aprendimos algo valioso...')
+         console.log(this.name + ': Creo que hoy aprendimos algo valioso...')
          return false
       break
       default:
-        console.log('mmokay?')
+        console.log(this.name + ': mmokay?')
     }
   }
 }
@@ -49,6 +48,9 @@ SouthParkCaracter.prototype = {
 }
 
 let stan = new SouthParkCaracter('Stan')
+//modificando los datos heredado de la clase padre directamente
+stan.kenny = 1;
+//llamando metodos
 stan.hdp()
 stan.saludo()
 
@@ -59,6 +61,9 @@ let kyle = new SouthParkCaracter('Kyle')
 kyle.saludo()
 kyle.hdp()
 
+let mr_maki = new SouthParkCaracter('Mr.Maky')
+mr_maki.saludo()
+
 console.log(stan instanceof SouthParkCaracter)
 console.log(typeof eric)
 console.log(kyle)
@@ -67,7 +72,7 @@ console.log(stan)
 
 /*CONTADOR DE CARTAS*/
 
-function Contador(){
+function Zapato(){
   this.card = [
      {
        cartasPositivas:[2,3,4,5,6]
@@ -81,12 +86,19 @@ function Contador(){
    ]
 }
 
-Contador.prototype = {
-  constructor:Contador
+Zapato.prototype = {
+  constructor:Zapato
 }
 
-let carta = new Contador()
+let carta = new Zapato()
 
+console.log(carta.card[0].cartasPositivas[2])
+console.log(carta.card[1].cartasNeutras[1])
+console.log(carta.card[2].cartasNegativas[1])
 console.log(carta.card[0])
 console.log(carta.card[1])
 console.log(carta.card[2])
+
+function Contador(mano){
+  this.mano = mano
+}
