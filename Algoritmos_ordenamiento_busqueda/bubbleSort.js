@@ -11,7 +11,7 @@
 repite el loop tantas veces como cantidad de items tenga el array
 
 pseudocodigo:
-
+================================================================
 programa Burbuja()
 
 Inicio
