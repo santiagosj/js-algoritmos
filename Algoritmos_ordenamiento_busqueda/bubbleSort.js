@@ -1,5 +1,6 @@
-/*ORDENAMIENTO POR INTERCAMBIO DIRECTO (burbujeo)*/
-
+//ORDENAMIENTO POR INTERCAMBIO DIRECTO (burbujeo)
+//Complejidad O(n2) n al cuadrado
+//Metodo de intercambio
 /*
 1-Compara los dos primeros items del array.
 
@@ -9,7 +10,45 @@
 
 repite el loop tantas veces como cantidad de items tenga el array
 
-podria tambien ser de la siguiente manera:
+pseudocodigo:
+
+programa Burbuja()
+
+Inicio
+
+   //declaracion de variables
+
+     booleano cambio = false;
+
+        1-mientras !cambio hacer
+
+        2-cambio = true
+
+        3-para entero i = 1; i < long(this); i++ hacer
+
+        4-si this[i - 1] > this[i] hacer
+
+             cambio = false;
+
+             entero tmp = this[i - 1]
+
+             this[i - 1] = this[i]
+
+             this[i] = tmp
+
+          fin si
+
+       fin para
+
+     fin mientras
+
+   devolver this
+
+ fin
+
+============================================================
+
+podria tambien ser de la siguiente manera en javaScript:
 
 function burbuja(a){
 
@@ -24,9 +63,9 @@ function burbuja(a){
             if ( x[i] < x[i+1] ){
 
                var temp = x[i];
-
                x[i] = x[i+1];
                x[i+1] = temp;
+
                cambio = true;
             }
         }

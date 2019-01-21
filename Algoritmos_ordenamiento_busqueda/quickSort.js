@@ -49,10 +49,10 @@ function swap(items, firstIndex, secondIndex){
 
 };
 
-function quickSort(items, izquierda, derecha){
+function quickSort(items, izquierda, derecha) {
   var index;
 
-  if(items.length > 1){
+  if(items.length > 1) {
      index = particion(items, izquierda, derecha);
 
      if(izquierda < index - 1){
