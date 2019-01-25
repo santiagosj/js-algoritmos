@@ -1,5 +1,6 @@
 //ORDENAMIENTO POR INTERCAMBIO DIRECTO (burbujeo)
-//Complejidad O(n2) n al cuadrado
+//Tiempo de ejecución: al contar con un loop interno que se ejecuta N veces tanto N elementos contenga el vector o arreglo a ordenar,
+//y contar con un loop externo que se ejecuta tambien N vecies decimos que el algoritmo consta de una complejidad de N * N = N ^ 2(N al cuadrado o indice de complejidad cuadratica) en notacion Big O decimos O(N2)
 //Metodo de intercambio
 /*
 1-Compara los dos primeros items del array.
@@ -12,40 +13,29 @@ repite el loop tantas veces como cantidad de items tenga el array
 
 pseudocodigo:
 ================================================================
-programa Burbuja()
+  inicio
 
-Inicio
+      programa Burbuja(vector a[n])
 
-   //declaracion de variables
+            desde i = 1 hasta longitud(a)
 
-     booleano cambio = false;
+                  desde j = 0 hasta longitud (a - 1)
 
-        1-mientras !cambio hacer
+                        si (a[j] > a[j + 1]) hacer
 
-        2-cambio = true
+                             aux = a[j]
+                             a[j] = a[j + 1]
+                             a[j + 1] = aux
 
-        3-para entero i = 1; i < long(this); i++ hacer
+                        fin si
 
-        4-si this[i - 1] > this[i] hacer
+                  fin desde j
 
-             cambio = false;
+            fin desde i
 
-             entero tmp = this[i - 1]
+        fin Burbuja
 
-             this[i - 1] = this[i]
-
-             this[i] = tmp
-
-          fin si
-
-       fin para
-
-     fin mientras
-
-   devolver this
-
- fin
-
+    fin
 ============================================================
 
 podria tambien ser de la siguiente manera en javaScript:
@@ -81,19 +71,19 @@ Array.prototype.burbuja = function (){
 
    var cambio = false;
 
-   while (!cambio) {
+      while (!cambio) {
 
-      cambio = true;
+           cambio = true;
 
-      for (var i = 1; i < this.length; i++){
+           for (var i = 1; i < this.length; i++){
 
-        if (this[i - 1] > this[i]) {
+           if (this[i - 1] > this[i]) {
 
-          cambio = false;
+               cambio = false;
 
-          var tmp = this[i - 1];
-          this[i - 1] = this[i];
-          this[i] = tmp;
+                var tmp = this[i - 1];
+                this[i - 1] = this[i];
+                this[i] = tmp;
 
         }
 
