@@ -22,7 +22,7 @@ console.log(result_0)
 //ignore case
 
 let miCadenaConMayusculas = "WhoLetTheDogsOut";
-let miExpReg_3 = /WhoLetTheDogsOut/i;
+let miExpReg_3 = /wholetthedogsout/i;
 let result_3 = miExpReg_3.test(miCadenaConMayusculas)
 console.log(result_3)
 
