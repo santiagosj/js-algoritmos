@@ -18,7 +18,7 @@ class Cola {
     return this.cola[0]
   }
 
-  tamañoCola(){
+  sizeCola(){
     return this.cola.length
   }
 
