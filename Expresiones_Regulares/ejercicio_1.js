@@ -26,6 +26,8 @@ let miExpReg_3 = /wholetthedogsout/i;
 let result_3 = miExpReg_3.test(miCadenaConMayusculas)
 console.log(result_3)
 
+//match method
+
 let extractoCadena = "Extraemos la palabra 'JavaScript' de este texto";
 let miExpReg_4 = /JavaScript/
 let result_4 = extractoCadena.match(miExpReg_4)

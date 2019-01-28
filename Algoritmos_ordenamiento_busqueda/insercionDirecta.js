@@ -46,8 +46,8 @@ function insertionSort (a) {
     return a;
 }
 
-var a = [4, 65, 2, -31, 0, 99, 83, 782, 1];
+var misNumeros = [4, 65, 2, -31, 0, 99, 83, 782, 1];
 
-insertionSort(a);
+insertionSort(misNumeros);
 
-console.log(a)
+console.log(misNumeros)

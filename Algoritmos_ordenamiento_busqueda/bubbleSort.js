@@ -1,6 +1,6 @@
 //ORDENAMIENTO POR INTERCAMBIO DIRECTO (burbujeo)
 //Tiempo de ejecución: al contar con un loop interno que se ejecuta N veces tanto N elementos contenga el vector o arreglo a ordenar,
-//y contar con un loop externo que se ejecuta tambien N vecies decimos que el algoritmo consta de una complejidad de N * N = N ^ 2(N al cuadrado o indice de complejidad cuadratica) en notacion Big O decimos O(N2)
+//y contar con un loop externo que se ejecuta tambien N veces decimos que el algoritmo consta de una complejidad de N * N = N ^ 2(N al cuadrado o indice de complejidad cuadratica) en notacion Big O decimos O(N2)
 //Metodo de intercambio
 /*
 1-Compara los dos primeros items del array.

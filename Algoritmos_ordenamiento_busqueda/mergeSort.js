@@ -15,6 +15,13 @@ ALGORITMO:
 
 7-comparar estas dos ulitmas listas y ordenarlas en una de menor a mayor
 
+pseudocodigo:
+
+funcion mezcla(int izq, int der, vector arr[n])
+
+        int a = 0;
+
+        mientras longitud(izq)
 ==========================================================================
 
 */
