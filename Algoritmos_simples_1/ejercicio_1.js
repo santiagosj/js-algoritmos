@@ -83,3 +83,50 @@ let dobles = numerosSimples.map(x => x * 2);
 
 console.log(numerosSimples)
 console.log(dobles)
+
+//==============================================================================
+
+//celcis a fahrenheit
+
+convertirCelenFa = (celcius) => {
+  let fahrenheit = (celcius * (9/5)) + 32;
+
+  if (typeof fahrenheit !== undefined) {
+    console.log(fahrenheit);
+  }else{
+    console.log("el dato es incorrecto")
+  }
+}
+convertirCelenFa(30)
+
+//==============================================================================
+
+//reverse a string
+
+function reverseString(str){
+  console.log(str.split('').reverse().join(''))
+}
+
+reverseString("hola")
+
+function reverseString2(str){
+  let arr = [...str]
+  let newStr = arr.map((_, i, arr) => arr[arr.length - 1 - i])
+
+  console.log(newStr.join(''))
+}
+
+reverseString2("me Cago en los hippies!")
+
+//==============================================================================
+
+//factorizando un numero
+
+function factorialize(num) {
+
+   if(num === 0){return 1}
+
+   return num * factorialize(num - 1);
+}
+
+factorialize(5);
