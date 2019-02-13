@@ -116,7 +116,7 @@ function reverseString2(str){
   console.log(newStr.join(''))
 }
 
-reverseString2("me Cago en los hippies!")
+reverseString2("anita lava la tina")
 
 //==============================================================================
 
