@@ -120,13 +120,56 @@ reverseString2("anita lava la tina")
 
 //==============================================================================
 
-//factorizando un numero
+//factorizando un numero con recurción
 
-function factorialize(num) {
-
-   if(num === 0){return 1}
-
-   return num * factorialize(num - 1);
+function factorialRecursivo(num) {
+  if (num == 0) {
+    return 1;
+  }
+  return num * factorialRecursivo(num - 1);
 }
 
-factorialize(5);
+factorialRecursivo(5);
+
+//==============================================================================
+//encontrando el string mas largo
+
+function encontrarElStringMasLargo(str) {
+  let newStr = str.split(' ');
+  let bigestString = 0;
+
+  for(let i = 0; i < newStr.length; i++) {
+       if(newStr[i].length > bigestString){
+           bigestString = newStr[i].length
+     }
+  }
+   console.log(bigestString);
+}
+
+encontrarElStringMasLargo("Me veras caer como una flecha salvaje");
+
+//==============================================================================
+//armar un array con los numeros mas grandes de los subarrays
+
+function numerosMasGrandes_1(arr){
+
+  let nuevoArr = [];
+
+  for (var i = 0; i < arr.length; i++) {
+
+       var numeroMayor = arr[i][0]
+
+       for (var j = 1; j < arr[i].length; j++) {
+
+            if (arr[i][j] > numeroMayor) {
+                numeroMayor = arr[i][j]
+                }
+       }
+       nuevoArr.push(numeroMayor)
+   }
+    console.log(nuevoArr)
+}
+
+numerosMasGrandes_1([[6,25,15,78],[10,40,35,16],[83,87,91,101],[255,1000,150,1]])
+
+//==============================================================================
