@@ -88,4 +88,84 @@ let miExpReg_12 = /Aa*/
 let result_12 = chewbaccaLinea.match(miExpReg_12)
 console.log(result_12)
 
-//Find Characters with Lazy Matching
+//Caracteres facil, devuelve solo la etiqueta <h1>
+
+let someText = "<h1>Bazinga!</h1>";
+let miExpReg_13 = /<h1>?/
+let result_13 = someText.match(miExpReg_13)
+console.log(result_13);
+
+let pass = 'P1P2P3P4P5P6CCCP7P8P9';
+let miExpReg_14 = /C+/;
+let result_14 = pass.match(miExpReg_14);
+console.log(result_14);
+
+//buscando el primer valor de un string
+
+let principio = "Nico y Santi son hermanos";
+let miExpReg_15 = /^Nico/ // o /^nico/i
+let result_15 = principio.match(miExpReg_15)
+console.log(result_15);
+
+//buscando el ultimo valor del string
+
+let final = "Esta es la historia sin fin";
+let miExpReg_16 = /fin$/;
+let result_16 = final.match(miExpReg_16);
+console.log(result_16);
+
+//usando clases de caracteres
+
+let someText_x = "Vamos a devolver la cantidad de caracteres en este string usando un atajo."
+let miExpReg_17 = /\w/gi;
+let result_17 = someText_x.match(miExpReg_17).length;
+console.log(result_17);
+
+//matching todo menos letras y numeros
+
+let someText_y = "El mismo mecanismo pero en negación, no toma letras ni numeros 1234 etc.";
+let miExpReg_18 = /\W/gi;
+let result_18 = someText_y.match(miExpReg_18).length;
+console.log(result_18);
+
+//match digitos
+
+let precioString = "El precio de mi Sandwitch es de $15.50";
+let miExpReg_19 = /\d/g;
+let result_19 = precioString.match(miExpReg_19);
+console.log(result_19);
+
+//negacion de digitos
+
+let precioString_2 = "El precio de mi Sandwitch es de $15.50";
+let miExpReg_20 = /\D/g;
+let result_20 = precioString_2.match(miExpReg_19);
+console.log(result_20);
+
+//restricciones, ejemplo usuario-
+
+let usuario = "skankhunt42";
+let miExpReg_21 = /^[a-z]{2,}\d*$/i;
+let result_21 = usuario.match(usuario);
+console.log(result_21);
+
+//detectando espacio en blanco
+
+let espacioEnBlanco = "Al infinito y mas allá!";
+let miExpReg_22 = /\s/g;
+let result_22 = espacioEnBlanco.match(miExpReg_21);
+console.log(result_22);
+
+//negacion de espacio en bleanco
+
+let espacioEnBlancoNo = "Al infinito y mas allá!";
+let miExpReg_23 = /\S/g;
+let result_23 = espacioEnBlancoNo.match(miExpReg_22).length;
+console.log(result_23);
+
+//especificando la cantidad de letras upper and lower
+
+let ohStr = "Ohhh no";
+let miExpReg_24 = /Oh{3,6}\sno/;
+let result_24 = miExpReg_24.test(ohStr);
+console.log(result_24);
