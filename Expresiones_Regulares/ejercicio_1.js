@@ -163,7 +163,7 @@ let miExpReg_23 = /\S/g;
 let result_23 = espacioEnBlancoNo.match(miExpReg_22).length;
 console.log(result_23);
 
-//especificando la cantidad de letras upper and lower
+//especificando la cantidad de letras mínimo y máximo
 
 let ohStr = "Ohhh no";
 let miExpReg_24 = /Oh{3,6}\sno/;
