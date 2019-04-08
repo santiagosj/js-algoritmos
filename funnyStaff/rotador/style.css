@@ -1,0 +1,27 @@
+.jumbotron {
+    font-family: 'Share Tech Mono';
+    height: 500px;
+    text-align: center;
+  }
+  
+  #btns {
+    width: 90%;
+    text-align: center; 
+    width: 225px;
+    height: 186px;
+    font-size: 23px;
+    position: relative;
+    left: 40%;
+    top: 50px;
+  }
+  
+  .lgreen {
+    background: lightgreen;
+    color: brown;
+    display: inline-block;
+    width: 75px;
+    height: 62px;
+    font-size: 18px;
+  }
+  
+ 
