@@ -173,3 +173,77 @@ function numerosMasGrandes_1(arr){
 numerosMasGrandes_1([[6,25,15,78],[10,40,35,16],[83,87,91,101],[255,1000,150,1]])
 
 //==============================================================================
+// comparar elementos de un array y contar los pares(hackerrank)
+//n representa la variedad de colores y ar la cantidad de unidades de medias que hay
+function paresDeMedias(n, ar){
+     const colors = {}
+
+     let pares = 0;
+
+     for(let i = 0;i < n; i++){
+
+         if(colors[ar[i]]){
+             pares++;
+             colors[ar[i]] = 0;
+         } else {
+             colors[ar[i]] = 1;
+         }
+     }
+     //return pares;
+     console.log(pares);
+}
+
+var medias = [1, 2, 1, 3, 2]
+
+paresDeMedias(5, medias)
+
+//===============================================================================
+//saltar unos: funcion que permite saltar en un array compuesto de 0s y 1s si c[i] == 1 salta y busca hacer la menor cantidad de saltos posibles, el resultado final es el numero de saltos realizados
+
+const saltandoUnos = (c) => {
+
+  var jump = 0;
+
+  // con el loopwhile let i = 0; 
+  /*for(let i = 0; i < c.length - 1; i++){
+      if (c[0] === 1) {
+          break;
+      }
+
+      if (c[i + 2] !== 1) {
+          jump++
+          i = i + 1;
+          continue;
+      }
+
+      if (c[i + 1] !== 1) {
+          jump++
+          continue
+      }
+     
+  }*/
+
+/*while(i < c.length){
+
+   if(c[i + 2] ===0 ) i += 2
+
+   else i+= 1
+
+   if( i !== c.length) jump++
+
+   console.log({jump, i})
+}*/
+
+for(let i = 0; i < c.length - 1; ++jump){
+    i += c[i+2] ? 1 : 2;
+ }
+
+  console.log(jump);
+  
+}
+
+var cerosYunos = [ 0, 0, 0, 1, 1, 0 ]
+
+saltandoUnos(cerosYunos);
+
+//===========================================================================
