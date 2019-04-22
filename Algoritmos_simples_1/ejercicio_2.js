@@ -221,11 +221,11 @@ class Libro {
   }
 }
 
-const lol = new Libro('anonymous');
+const lol = new Libro('anonimo');
 
 console.log(lol.escritor);  
 
-lol.escritor = 'wut';
+lol.escritor = 'Agente molder';
 
 console.log(lol.escritor);  
 
