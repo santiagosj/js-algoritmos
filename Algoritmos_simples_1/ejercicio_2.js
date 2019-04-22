@@ -28,6 +28,15 @@ const sum = (function() {
 
 console.log(sum(1, 2, 3)); 
 //==========================================================================
+//el mismo resultado que la funcion de arriba
+ let arrX = [1, 2, 3];
+ const sum2 = (num, total) =>{
+    return num + total;
+ }
+
+ arrX.reduce(sum2);
+
+//==========================================================================
 const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
 
 let arr2;

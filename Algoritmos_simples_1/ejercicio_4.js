@@ -24,11 +24,14 @@ function sumAll(arr) {
 
   }
 
-  //sacando elementos de un array especificando por parametro
-  //el ejemplo 1 en realidad devuelve el/ los elementos no especificados
+  
+//==================================================================
+//sacando elementos de un array especificando por parametro
+//el ejemplo 1 en realidad devuelve el/ los elementos no especificados
+
   const destroyer = (arr, ...args) => arr.filter(i => !args.includes(i));
 
-destroyer([1,2,3,2,1,5], 2, 1);
+  destroyer([1,2,3,2,1,5], 2, 1);
 
 //==============================================================
 //funcion para devolver objeto de una coleccion segun un parametro que se le ingrese..
