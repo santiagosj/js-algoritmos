@@ -234,8 +234,8 @@ const saltandoUnos = (c) => {
    console.log({jump, i})
 }*/
 
-for(let i = 0; i < c.length - 1; ++jump){
-    i += c[i+2] ? 1 : 2;
+for( let i = 0; i < c.length - 1; ++jump ){
+    i += c[ i + 2] ? 1 : 2;
  }
 
   console.log(jump);
