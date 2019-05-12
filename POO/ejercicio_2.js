@@ -22,16 +22,16 @@ function SouthParkCaracter(name){
   this.kenny = Math.floor(Math.random() * Math.floor(3));
   this.hdp = () => {
     if (this.kenny > 0) {
-         console.log(this.name + ': Mataron a Kenny! hijos de Puta!')
+         console.log(this.name + ': Mataron a Kenny! hijos de #$%&#!')
     }
   };
   this.saludo = () => {
     switch (this.name){
       case 'Stan':
-         console.log(this.name + ': Mierda...estoy en una computadora otra vez!?')
+         console.log(this.name + ': ...estoy en una computadora otra vez!?')
          return false
       case 'Eric':
-         console.log(this.name + ': ME CAGO EN LOS HIPPIES!')
+         console.log(this.name + ': ME ##### EN LOS HIPPIES!')
          return false
       case 'Kyle':
          console.log(this.name + ': Creo que hoy aprendimos algo valioso...')
