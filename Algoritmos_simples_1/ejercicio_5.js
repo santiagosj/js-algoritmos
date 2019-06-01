@@ -60,3 +60,22 @@ function sumaFiboImpares(num){
   return result;
   
 }
+
+===========================================================================
+    //suma de numeros primos
+function sumarPrimos(num) {
+  // paso 1 genero un array de numeros a desde el primer numero primo (2) hasta el numero que paso por parametro.
+  let arr = Array.from({length: num+1}, (x, y) => y).slice(2); 
+  // paso 2 filtro los numeros primos
+  let primos = arr.filter( (n) => { 
+    let m = n - 1;
+    while (m > 1 && m >= Math.sqrt(n)) { 
+      if ((n % m) === 0) 
+        return false;
+        m--;
+    }
+      return true;
+  });
+  // paso 3 sumo los valores reducidos a un valor unico.
+  return primos.reduce((a,b) => a + b); 
+}
