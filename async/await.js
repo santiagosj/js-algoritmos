@@ -43,4 +43,5 @@ const posts = [
 
     console.log(data)
   }
+  
   fetchUsers();
