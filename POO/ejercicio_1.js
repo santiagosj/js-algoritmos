@@ -23,7 +23,7 @@ function SouthParkCaracter(name) {
 let stan = new SouthParkCaracter('Kenny')
 stan.hdp()
 //El constructor es una funcion que crea nuevos objetos define las propiedades y el comportamiento que van a pertencer al nuevo objeto
-//esta manera es muy basica y presenta el problema de que va a transmitir por herencia sus atributos a los nuevos objetos.
+//esta manera es muy básica y presenta el problema de que va a transmitir por herencia sus atributos a los nuevos objetos.
 function Person(){
   this.name = 'Peter';
   this.lastName = 'Greefin';

@@ -1,6 +1,7 @@
 //implementacion de una pila utilizando un arrray
 
 class Pila_1 {
+
   constructor(){
     this.pila_1=[]
   }
@@ -56,10 +57,10 @@ class Pila_2 {
   }
 
   sacarElemento_2(){
-    this.contador--;
-    const elemento = this.pila_2[this.contador];
+    this.contador--
+    const elemento = this.pila_2[this.contador]
     delete this.pila_2[this.contador]
-    return elemento;
+    return elemento
   }
 //estos metodos se aplican casi de la misma manera que en un array
   ultimoElemento_2() {

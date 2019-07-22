@@ -61,7 +61,7 @@ function sumaFiboImpares(num){
   
 }
 
-===========================================================================
+//===========================================================================
     //suma de numeros primos
 function sumarPrimos(num) {
   // paso 1 genero un array de numeros a desde el primer numero primo (2) hasta el numero que paso por parametro.
@@ -79,3 +79,13 @@ function sumarPrimos(num) {
   // paso 3 sumo los valores reducidos a un valor unico.
   return primos.reduce((a,b) => a + b); 
 }
+
+
+//====================================================================
+//minimo común multiplo
+
+function mcm(arr){
+  return arr
+}
+
+mcm([1,5])
