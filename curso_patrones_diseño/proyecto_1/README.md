@@ -9,7 +9,6 @@
     felix.addEventListener('click' ,function(){
       document.getElementById('counter').innerHTML= `You clicked me ${counter += 1} times.`
     })
-    
     ```
     
  Este código tiene la imagen puesta directamente en el archivo index.html
