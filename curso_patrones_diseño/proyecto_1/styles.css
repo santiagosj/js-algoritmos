@@ -1,5 +1,5 @@
 .container{
-    width: 300px;
+    width: auto;
     overflow: hidden;
     position: relative;
     margin: auto;
@@ -8,6 +8,14 @@
     text-align: center;
 }
 
+#felix, #stimpy{
+    border: 1px dotted black;
+    margin-bottom: 20px;
+    margin: auto;
+}
 #felix{
     max-width: 250px;
+}
+#stimpy {
+    max-width: 150px;
 }
