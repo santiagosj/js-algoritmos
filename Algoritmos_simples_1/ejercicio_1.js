@@ -16,6 +16,16 @@ function sumaEnteros(){
 sumaEnteros()
 
 //==============================================================================
+//suma todos los numeros que se le pasen por parametro
+function sum(...nums){
+  let total=0;
+  for(const num of nums){
+     total += num;
+  }
+  
+  return total  
+
+}
 
 //imprimir numeros pares en un array e impares en otro
 
@@ -247,3 +257,9 @@ var cerosYunos = [ 0, 0, 0, 1, 1, 0 ]
 saltandoUnos(cerosYunos);
 
 //===========================================================================
+//imprimiendo 
+const days=["domingo","lunes","martes","miercoles","jueves","viernes","sabado"]
+for(let day of days){
+  console.log(day.charAt(0).toUpperCase() + day.slice(1))
+}
+

@@ -1,9 +1,11 @@
+
+// 1-Imprimiendo los colores dentro de la lista.
 const things = ['red', 'basketball', 'paperclip', 'green', 'computer', 'earth', 'udacity', 'blue', 'dogs'];
 
-const [red, , ,green, , , ,blue] = things;
+const [one, , ,two, , , ,three] = things;
 const colors = `List of Colors
-1. ${red}
-2. ${green}
-3. ${blue}`;
+1. ${one}
+2. ${two}
+3. ${three}`;
 
 console.log(colors);
