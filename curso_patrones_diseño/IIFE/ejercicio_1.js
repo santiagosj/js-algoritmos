@@ -1,3 +1,24 @@
+//ejemplo básico-1
+ (function(){
+     console.log("Hola IIFE")
+ })();
+ 
+ //ejemplo básico-2
+ (function(nombre){
+     console.log(`Hola ${nombre}`)
+ })('Willy')
+
+//ejemplo básico-3
+const myFuncion = (
+    function(nombre){
+        const hola = "Hola";
+        return function(){
+           console.log(`${hola} ${nombre}`)
+        }
+     }
+    )('Santi')
+
+myFuncion(); //?WTF
 
 document.body.innerHTML = '';
 
