@@ -1,16 +1,12 @@
 module.exports = {
     getAmount: function(coinType) {
-        // COINS:
-        // [p]enny
-        // [n]ickel
-        // [d]ime
-        // [q]uarter
-        switch(coinType){
-          case 'p': return 1;
-          case 'n': return 5;
-          case 'd': return 10;
-          case 'q': return 25;
-          default: throw new Error('Unrecognized coin ' + coinType);
+        const COINS = {
+            "p":1,
+            "n":5,
+            "d":10,
+            "q":25
         }
+       if(!COINS[coinType]) throw new Error('Unrecognized coin ' + coinType)
+           return COINS[coinType]
       },
 };

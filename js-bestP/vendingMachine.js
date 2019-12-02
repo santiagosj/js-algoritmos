@@ -28,6 +28,6 @@ module.exports = {
     var currentBalance = balanceManager.getBalance();
     balanceManager.decreaseBalance(currentBalance);
     return this.convertToChange(currentBalance);
-}
+  }
 
 };
