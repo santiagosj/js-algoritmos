@@ -1,4 +1,4 @@
-//ES6--->usando funciones map filter y reduce
+//ES6--->usando funciones map, filter y reduce
 
 const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
 const squareList = (arr) => {
@@ -13,7 +13,7 @@ const squaredIntegers = squareList(realNumberArray);
 console.log(squaredIntegers);
 
 //==========================================================================
-//operador de propagacion ejemplo super simple
+//operador de propagacion ejemplo super simple, IIFE, use strict, reduce
 
 const sum = (function() {
 
@@ -203,7 +203,7 @@ class Perro {
 }
 
 
-var perro = new Perro('willy')
+const perro2 = new Perro('willy')
 //=====================================================================
 //setters and getters ejemplo-1
 

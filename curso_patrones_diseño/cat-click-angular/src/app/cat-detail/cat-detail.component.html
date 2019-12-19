@@ -1,0 +1,7 @@
+<div class="container" *ngIf="cat">
+    <div class="avatar" >
+        <h2>{{cat.name}}</h2>
+        <p>Likes: {{cat.count}}</p>
+        <img src="{{cat.image}}" alt=""(click)="addLike(cat)">
+    </div>
+</div>

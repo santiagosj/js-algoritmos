@@ -3,7 +3,7 @@
 let miCadena = "Hola Mundo!";
 let miExpReg = /Hola/;
 let result_0 = miExpReg.test(miCadena)
-console.log(result_0)
+console.log(result_0) //true
 
  //es posible buscar cadenas literales
 

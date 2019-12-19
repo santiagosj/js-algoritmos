@@ -1,3 +1,4 @@
+//una expresión de función invocada inmediatamente crea un ámbito privado que protege el acceso a variables o métodos
 //ejemplo básico-1
  (function(){
      console.log("Hola IIFE")
@@ -43,3 +44,10 @@ for (var i = 0; i < nums.length; i++) {
 
     document.body.appendChild(elem);
 };
+//ejemplo-4
+(function(n){
+    delete n;
+    return n;
+  })(2);
+  //2
+  //la propiedad delete es solo efectiva en los valores de objetos.

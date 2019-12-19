@@ -45,19 +45,19 @@ fibonacciReverse(16)
 function sumaFiboImpares(num){
   var arr = [0, 1];
   
-  var result = 0;
+  var resultado = 0;
 
   while (arr[1] <= num) {
       //chequea si es impar
       if (arr[1] % 2 !== 0) {
-          result += arr[1];
+          resultado += arr[1];
       }
 
       arr[1] += arr[0];
       arr[0] = arr[1] - arr[0];
   }
 
-  return result;
+  return resultado;
   
 }
 
@@ -80,6 +80,31 @@ function sumarPrimos(num) {
   return primos.reduce((a,b) => a + b); 
 }
 
+//====================================================================
+/* Transformar array de elementos en objeto y contar cuantas veces se repite cada elemento sus valores*/
+
+function countWords(inputWords) {
+
+  var resultado = {};
+
+  inputWords.reduce((valorAnterior, valorActual, indice, array)=>{
+
+     if(!resultado[valorActual]){
+
+          resultado[valorActual] = 1;
+
+     } else {
+
+          resultado[valorActual]++;
+
+     }
+
+     return valorActual;
+
+  },null);
+  
+  return resultado;
+}
 
 //====================================================================
 //minimo común multiplo

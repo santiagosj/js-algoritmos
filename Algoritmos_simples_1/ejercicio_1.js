@@ -214,7 +214,12 @@ const saltandoUnos = (c) => {
 
   var jump = 0;
 
-  // con el loopwhile let i = 0; 
+  for( let i = 0; i < c.length - 1; ++jump ){
+    i += c[ i + 2] ? 1 : 2;
+ }
+
+  console.log(jump);
+  // con while loop let i = 0; 
   /*for(let i = 0; i < c.length - 1; i++){
       if (c[0] === 1) {
           break;
@@ -243,12 +248,6 @@ const saltandoUnos = (c) => {
 
    console.log({jump, i})
 }*/
-
-for( let i = 0; i < c.length - 1; ++jump ){
-    i += c[ i + 2] ? 1 : 2;
- }
-
-  console.log(jump);
   
 }
 

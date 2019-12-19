@@ -29,6 +29,7 @@ $(function(){
    2-la funcion getNotes()
    3-la funcion init()
    */
+  
     var octopus = {
         addNewNote: function(noteStr) {
             model.add({
