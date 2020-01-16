@@ -46,7 +46,6 @@ var controlador = {
 
     init:function(){
         model.gatoActual = model.gatos[0];
-    
         gatoContenedorVista.init()
         gatoListaVista.init()
     },
