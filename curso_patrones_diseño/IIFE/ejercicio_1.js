@@ -23,7 +23,7 @@ myFuncion(); //?WTF
 
 document.body.innerHTML = '';
 
-var nums = [1,2,3];
+var nums = [1, 2, 3];
 
 // Let's loop over the numbers in our array
 for (var i = 0; i < nums.length; i++) {

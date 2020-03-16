@@ -114,3 +114,156 @@ function mcm(arr){
 }
 
 mcm([1,5])
+ 
+//================================NodeSchool.io====================================
+/**
+ *1 - funcion de alto nivel recursiva
+ * @param {function} operation 
+ * @param {number} num 
+ * 
+ * -operation es una operacion que se repite n veces
+ * -num es la cantidad de veces que se repite operation
+ */
+function repeat(operation, num) {
+  if (num <= 0) return
+  operation()
+  return repeat(operation, --num)
+}
+/**
+ * 2- basic map, convert this function:
+ * 
+ *  function doubleAll(numbers) {
+      var result = []
+      for (var i = 0; i < numbers.length; i++) {
+        result.push(numbers[i] * 2)
+      }
+      return result
+    }
+
+    module.exports = doubleAll
+ * 
+ * to a map
+ */
+
+ function doubleAll(numbers){
+   return numbers.map(n => n * 2) 
+ }
+/**
+ * 
+ * @param {array to filter} messages 
+ * filtrar los mensajes menores de 50 caracteres
+ */
+module.exports = function getShortMessages(messages) {
+  return messages.filter(function(item) {
+    return item.message.length < 50
+  }).map(function(item) {
+    return item.message
+  })
+}
+
+//======================================== 
+//DIFERENCIA SIMETRICA TEORIA DE CONJUNTOS
+//========================================
+
+const diff = (arr1, arr2) => [
+  ...arr1.filter(item => !arr2.includes(item)),
+  ...arr2.filter(item => !arr1.includes(item))
+]
+  
+const sym = (...args) => [...new Set(args.reduce(diff))]
+
+console.log(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]))
+
+//=============================================================
+//DISTINTAS MANERAS DE LEIMINAR ELEMNTOS DUPLICADOS DE UN ARRAY
+//=============================================================
+
+//1- transformar todos los arrays en un solo array
+//2- filtrar el array
+
+//a- Set
+const arrayDeValoresUnicos1 = (...arrs) => {
+
+   const arr = [].concat(...arrs)
+
+   return [...new Set(arr)]
+}
+
+//b- Filter
+
+const arrayDeValoresUnicos2 = (...arrs) => {
+
+  const arr = [].concat(...arrs)
+
+  return arr.filter((a, b) => arr.indexOf(a) === b )
+}
+
+//c- Reduce
+
+const arrayDeValoresUnicos3 = (...arrs) => {
+
+  const arr = [].concat(...arrs)
+
+  return arr.reduce((a,b)=> a.includes(b) ? a : [...a, b],[])
+} 
+
+//==========================================================
+//ACTUALIZACION DE INVENTARIO
+//==========================================================
+
+function updateInventory1(arr1, arr2) {
+  
+  var index
+
+  var checkName = function(name){
+      for(let i = 0;i < this.length; i++){
+          if(this[i][1]===name){
+              return i
+          }
+      }
+      return undefined
+  }
+
+  for(var i = 0;i< arr2.length;i++){
+       index = checkName.call(arr1,arr2[i][1])
+
+       if(index === undefined){
+           arr1.push(arr2[i])
+       }else{
+           arr1[index][0] += arr2[i][0]
+       }
+  }
+
+  return arr1;
+}
+
+function updateInventory2(arr1, arr2) {
+  
+  var index
+
+  arr2.forEach((e,i)=>{
+      index = arr1.map(e => e[1]).indexOf(e[1])
+      if(index == -1) arr1.push(e)
+      else arr1[index][0] += e[0]
+  })
+
+  return arr1.sort((a,b)=>{a[1]< b[1]});
+}
+
+// ejemplos de inventario
+var curInv = [
+  [21, "Bowling Ball"],
+  [2, "Dirty Sock"],
+  [1, "Hair Pin"],
+  [5, "Microphone"]
+];
+
+var newInv = [
+  [2, "Hair Pin"],
+  [3, "Half-Eaten Apple"],
+  [67, "Bowling Ball"],
+  [7, "Toothpaste"]
+];
+
+updateInventory1(curInv, newInv);
+updateInventory2(curInv, newInv);

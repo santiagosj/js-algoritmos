@@ -168,7 +168,7 @@ function findMiss(str){
  }
 
  //=================================================================================
- //funcion que recibe multiples arrays y devuelve uno solo si repetir elementos
+ //funcion que recibe multiples arrays y devuelve uno solo sin repetir elementos
  //el objeto Set permite almacenar valores unicos de cualquier tipo:checkear developers.mozilla reference 
 
  function arrayConElementosUnicos(...arr) {
