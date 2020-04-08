@@ -83,7 +83,7 @@ function sumarPrimos(num) {
 //====================================================================
 /* Transformar array de elementos en objeto y contar cuantas veces se repite cada elemento sus valores*/
 
-function countWords(inputWords) {
+function contarNombres1(inputWords) {
 
   var resultado = {};
 
@@ -101,10 +101,15 @@ function countWords(inputWords) {
 
      return valorActual;
 
-  },null);
+  }, null);
   
   return resultado;
 }
+
+const contarNombres2 = arr.reduce((contadorNombre,nombre)=>{
+  contadorNombre[nombre] = (contadorNombre[nombre] || 0) + 1
+  return contadorNombre
+},{})
 
 //====================================================================
 //minimo común multiplo
