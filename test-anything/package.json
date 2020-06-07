@@ -1,0 +1,14 @@
+{
+  "name": "test-anything",
+  "version": "1.0.0",
+  "description": "testing-workshop",
+  "main": "metatest.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "santi",
+  "license": "ISC",
+  "dependencies": {
+    "tape": "^5.0.1"
+  }
+}
