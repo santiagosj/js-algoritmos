@@ -24,7 +24,7 @@ function popShift(arr) {
     return arr.reduce((a, b) => a + b);
   }
   
-  console.log(sumOfTen([2, 5, 1, 5, 2, 1]));
+  console.log( sumOfTen([2, 5, 1, 5, 2, 1]) );
   //sin splice return 16 
 //==========================================================
 function htmlColorNames(arr) {
