@@ -33,3 +33,26 @@ function plusMinus(arr) {
   console.table(resZ.toFixed(6)) 
 
 }
+//escalera de sostenidos 1
+function escaleraDeSostenidos(altura){
+  for(let i = 1; i <= altura; i++){
+      let escalon = ''
+      for(let j = 1;j <= altura - i; j++){
+          escalon += ' ' 
+      }
+
+      for(let j = 1; j < i + 1; j++){
+         escalon += '#' 
+      }
+     console.log(escalon)
+  }
+}
+
+//escalera de sostenidos 2 padStart
+
+function escaleraDeSostenidos2(altura){
+  for(let i = 0;i < altura; i++ ){
+     let escalon = '#'.padStart(altura - i, ' ').concat(''.padStart(i,'#'))
+     console.log(escalon)
+  }
+}
