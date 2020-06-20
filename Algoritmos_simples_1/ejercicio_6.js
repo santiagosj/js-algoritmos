@@ -56,3 +56,21 @@ function escaleraDeSostenidos2(altura){
      console.log(escalon)
   }
 }
+
+//===========================================================================
+//suma maxima y suma minima
+function miniMaxSum(arr) {
+
+  arr.sort((a,b)=>{
+    return a - b
+  })
+  
+  let max = Math.max(...arr), 
+  min = Math.min(...arr)
+
+  let maxSum = arr.filter(v => v !== min).reduce((a, b)=>{return a + b}),
+  minSum = arr.filter(v => v !== max).reduce((a, b)=>{return a + b})
+
+  return Array.of(minSum, maxSum).join(' ')
+
+}
