@@ -82,4 +82,14 @@ function add(){
  console.log(add(1)(3)(2)) // output: 6
  console.log(add(1,2)(3)) // output: 6*/
 
+ function add (a){
+     let sum = a;
+     function result(b){
+         sum += b
+         return sum
+     }
+
+      return result
+ }
+
 module.exports=add;
