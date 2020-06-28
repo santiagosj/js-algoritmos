@@ -75,8 +75,93 @@ function miniMaxSum(arr) {
 
 }
 
-//===========================================================================
+//==========================================================================
+// My solution
 
-function stringToRepeat(str,n){
-     
+function repeatedString(s, n){
+   const counta = (str) => (str.match(/a/g) || [] ).length 
+   return counta(s) * (parseInt(n / s.length)) + counta(s.substr(0, n % s.length));
 }
+//==========================================================================
+
+/*function repeatedString(s, n) {
+  const counta = (str) => str.split('')
+    .filter(c => c == 'a')
+    .length
+  
+  const d = Math.floor(n / s.length)
+  const r = n - (s.length * d)
+  return d * counta(s) + counta(s.substr(0, r))
+}*/
+
+//==========================================================================
+
+/*const repeatedString = (s, n) => {
+  const countA = s => s.split('a').length - 1;
+
+  let len = s.length;
+  let reps = Math.floor(n / len);
+  let remainder = s.slice(0, n % len);
+
+  return reps * countA(s) + countA(remainder);
+};*/
+
+//=========================================================================
+
+/*function repeatedString(s, n) {
+
+  countAs = (s, index) => {
+    let count = 0;
+    while (index >= 0) {
+        if (s[index] == 'a') count++;
+        index--;
+    }
+    return count;
+  };
+  if (n <= s.length) {
+    return countAs(s, n - 1);
+  } else { 
+    const parts = Math.floor(n / s.length);
+    const rest = n % s.length;
+    return countAs(s, s.length - 1) * parts + countAs(s, rest - 1);
+  }
+}*/
+
+//==================================================================
+
+/*function repeatedString(s, n) {
+  const count = (s) => s.replace(/[^a]/g, '').length;
+  return count(s) * (parseInt(n / s.length)) +
+  count(s.substr(0, n % s.length));
+}*/
+
+//==================================================================
+
+/*function filterAs(arr) {
+  let result = 0;
+
+  for (let letter of arr) {
+      if (letter === 'a') {
+          result++
+      }
+  }
+
+  return result
+}
+
+function repeatedString(s, n) {
+  const lengthString = s.length
+  const numberDivision = Math.floor(n / lengthString)  
+  const numberOfAs = filterAs(s)
+  const remainder = n - (numberDivision * lengthString)
+
+  if (remainder === 0) {
+      return numberDivision * numberOfAs
+  }
+
+  let moreAs = filterAs(s.substring(0, remainder))
+
+  return numberDivision * numberOfAs + moreAs
+}*/
+
+//===================================================================
