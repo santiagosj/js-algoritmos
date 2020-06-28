@@ -74,3 +74,9 @@ function miniMaxSum(arr) {
   return Array.of(minSum, maxSum).join(' ')
 
 }
+
+//===========================================================================
+
+function stringToRepeat(str,n){
+     
+}

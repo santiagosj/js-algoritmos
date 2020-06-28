@@ -1,1 +1,1 @@
-functional-javascript-workshop
+functional-javascript
