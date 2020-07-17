@@ -1,7 +1,0 @@
-<ul>
-    <li *ngFor="let cat of cats" >
-        <p (click)=selectedCat(cat) >{{cat.name}}</p>
-    </li>
-</ul>
-
-<app-cat-detail [cat]="catSelect"></app-cat-detail>

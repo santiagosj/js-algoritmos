@@ -17,7 +17,7 @@ const myFuncion = (
            console.log(`${hola} ${nombre}`)
         }
      }
-    )('Santi')
+)('Santi')
 
 myFuncion(); //?WTF
 

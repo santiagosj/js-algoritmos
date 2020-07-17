@@ -1,18 +1,16 @@
 //ejercicio-1 básico
-const nombre = 'Santi'
 
-function saludar(){
-    const vos = 'Ameo';
-
+function saludar(receptor, emisor){
+    
     function hola(){
-        console.log(`Hola ${vos} como estas? mi nombre es ${nombre}`)
+        console.log(`Hola ${receptor} como estas? mi nombre es ${emisor}`)
     }
 
     hola();
 
 }
 
-saludar();
+saludar('Tito','Doug');
 
 //ejemplo-1
 const symbol = '¥';
