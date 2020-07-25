@@ -26,7 +26,7 @@ Tree.prototype.busquedaAncho = function (value) {
    return null;
 };
 
-//insercion
+//inserción
 Tree.prototype.add = function (value, toNodeValue){
   var node = new Node(value)
   var parent = toNodeValue ? this.busquedaAncho(toNodeValue) : null
