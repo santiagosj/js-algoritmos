@@ -33,3 +33,15 @@ function hourGlass(arr) {
     
     return maxValue;
 }
+
+// left Rotation
+function rotLeft(a, d) {
+    let newArr;
+    if(a.length !== 0){
+      let rotA = a.slice(d)
+      let rotB = a.slice(0, d)
+      newArr = rotA.concat(rotB)     
+    } 
+ 
+    return newArr
+}
