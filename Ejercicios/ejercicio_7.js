@@ -1,3 +1,9 @@
+/**
+ * Array ejercicios
+ */
+
+// =========================================================================
+
 // reloj de arena
 /**
  * @linkProblem https://www.hackerrank.com/challenges/2d-array/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays
@@ -44,4 +50,21 @@ function rotLeft(a, d) {
     } 
  
     return newArr
+}
+/**
+ * @linkProblem https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays&h_r=next-challenge&h_v=zen
+ * 
+ * @param {*} q 
+ */
+
+function minimumBribes(q) {
+   let bribes = 0;
+    
+   for(let x = q.length; x >=1; x--){
+      if(q[x - 1] - 1 > 2){
+         console.log("Too chaotic")
+      }
+     
+   }
+
 }
